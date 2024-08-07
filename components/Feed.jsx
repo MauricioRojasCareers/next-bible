@@ -34,6 +34,7 @@ const Feed = () => {
   const btnClick = async () => {
     const btnResponse = await fetch("/api/prompt");
     console.log("btnResponse", btnResponse);
+    setPosts(data);
   };
 
   const handleSearchChange = (e) => {};
