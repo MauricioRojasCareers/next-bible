@@ -33,6 +33,8 @@ const Feed = () => {
 
   const btnClick = async () => {
     const btnResponse = await fetch("/api/prompt");
+    const data = await response.json();
+
     console.log("btnResponse", btnResponse);
     setPosts(data);
   };
