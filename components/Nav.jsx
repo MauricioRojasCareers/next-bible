@@ -30,7 +30,7 @@ const Nav = () => {
           height={30}
           className="object-contain"
         ></Image>
-        <p className="logo_text">Pomptopia</p>
+        <p className="logo_text">Promptopia</p>
       </Link>
 
       {/* {alert(providers)} */}
@@ -48,7 +48,7 @@ const Nav = () => {
             </button>
             <Link href="/profile">
               <Image
-                src="/assets/images/logo.svg"
+                src={session?.user.image}
                 width={37}
                 height={37}
                 className="rounded-full"
@@ -78,7 +78,7 @@ const Nav = () => {
         {session?.user ? (
           <div className="flex">
             <Image
-              src="/assets/images/logo.svg"
+              src={session?.user.image}
               width={37}
               height={37}
               className="rounded-full"
