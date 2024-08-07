@@ -31,6 +31,11 @@ const Feed = () => {
     fetchPosts();
   }, []);
 
+  btnClick = async () => {
+    const btnResponse = await fetch("/api/prompt");
+    console.log("btnResponse", btnResponse);
+  };
+
   const handleSearchChange = (e) => {};
   return (
     <section className="feed">
@@ -44,6 +49,7 @@ const Feed = () => {
           className="search_input peer"
         />
       </form>
+      <button onClick={btnClick}> fetch data</button>
 
       <PromptCardList data={posts} handleTagClick={() => {}} />
     </section>
