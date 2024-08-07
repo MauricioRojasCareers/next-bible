@@ -31,7 +31,7 @@ const Feed = () => {
     fetchPosts();
   }, []);
 
-  btnClick = async () => {
+  const btnClick = async () => {
     const btnResponse = await fetch("/api/prompt");
     console.log("btnResponse", btnResponse);
   };
